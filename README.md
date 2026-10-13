@@ -1,16 +1,61 @@
-# React + Vite
+# Troop Organizer for Kingshot
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A companion web application for the game Kingshot. Manage your troop inventory and plan troop distributions across marches.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add troops by type and tier (T1 to T10).
+- Create and rename multiple inventories.
+- View available quantities grouped by troop type and tier.
+- Set up a formation with one to twenty marches.
+- Allocate troops by percentage or by unit count, with a breakdown of the tiers used.
+- Choose the troop-type priority used when allocating units.
+- Fill a march with the remaining troops or adjust it to the available troops.
+- Save, reopen, and delete formations.
+- Review the troops remaining after allocation.
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript and CSS
 
-## Expanding the Oxlint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Node.js and npm
+
+## Installation and development
+
+From the project root, install the dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Vite will print the local URL to open in your browser.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the development server with hot reloading. |
+| `npm run build` | Builds the production app into the `dist` directory. |
+| `npm run preview` | Serves the production build locally after `npm run build`. |
+| `npm run lint` | Lints the code with Oxlint. |
+
+## Data storage
+
+Inventories and formations are stored in the browser's `localStorage`. They remain available in the same browser, but are not synchronized across devices or sent to a server.
+
+## Project structure
+
+```text
+src/
+├── components/       # Inventory and distribution components
+├── assets/           # Images and static assets
+├── App.jsx           # Main application state and logic
+├── App.css           # Application styles
+├── index.css         # Global styles
+└── main.jsx          # React entry point
+```
